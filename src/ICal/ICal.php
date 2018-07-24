@@ -2335,9 +2335,7 @@ class ICal
         }
 
         try {
-            new \DateTime($value);
-
-            return true;
+            return strtotime($value);
         } catch (\Exception $e) {
             return false;
         }
